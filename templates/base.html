@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://jprodrigues-thorinflask-3igcods34ye.ws-eu51.gitpod.io/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="https://jprodrigues-thorinflask-3igcods34ye.ws-eu51.gitpod.io/favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>Thorin Flask App</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="{{url_for('careers')}}">Careers</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
