@@ -1,5 +1,6 @@
 """Thorin flask app python file"""
 import os
+import json
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -14,7 +15,10 @@ def index():
 @app.route("/about")
 def about():
     """Define route for about page"""
-    return render_template("about.html", page_title="About")
+    data = []
+    with open("data/company.json","r") as json_data:
+        data = json.load(json_data)
+    return render_template("about.html", page_title="About", company=data)
 
 
 @app.route("/contact")
